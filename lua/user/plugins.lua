@@ -91,6 +91,9 @@ return packer.startup(function(use)
   
   -- Null - ls
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  
+  -- Markdown Preview
+  use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

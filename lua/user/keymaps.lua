@@ -52,7 +52,7 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 keymap("n", "<A-j>", ":m .+1<CR>==", opts)
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)
-keymap("n", "p", '"_dP', opts)
+keymap("v", "p", '"_dP', opts)
 
 -- Visual Block --
 -- Move text up and down

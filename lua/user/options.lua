@@ -38,3 +38,18 @@ vim.opt.shortmess:append "c"
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+
+-- Autocommand Options
+local au = require('au')
+
+-- Highlight the yanked text
+au.TextYankPost = function()
+    vim.highlight.on_yank()
+end
+
+vim.cmd [[
+  augroup vimrc-remember-cursor-position
+    autocmd!
+    autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+  augroup END
+]]
