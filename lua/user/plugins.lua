@@ -55,6 +55,8 @@ return packer.startup(function(use)
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use 'Mofiqul/dracula.nvim'
+  -- use 'folke/tokyonight.nvim'
+  use 'ghifarit53/tokyonight-vim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -63,6 +65,8 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp" -- Completion for NVIM LSP
+  use "hrsh7th/cmp-nvim-lua" -- Completion for NVIM LUA
+  use "hrsh7th/cmp-emoji"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine

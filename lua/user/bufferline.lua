@@ -31,15 +31,14 @@ bufferline.setup {
     --     return vim.fn.fnamemodify(buf.name, ':t:r')
     --   end
     -- end,
-    max_name_length = 30,
+    max_name_length = 20,
     max_prefix_length = 30, -- prefix used when a buffer is de-duplicated
     tab_size = 30,
     diagnostics = false, -- | "nvim_lsp" | "coc",
     diagnostics_update_in_insert = false,
     -- diagnostics_indicator = function(count, level, diagnostics_dict, context)
     --   return "("..count..")"
-    -- end,
-    -- NOTE: this will be called a lot so don't do any heavy processing here
+    -- end, NOTE: this will be called a lot so don't do any heavy processing here
     -- custom_filter = function(buf_number)
     --   -- filter out filetypes you don't want to see
     --   if vim.bo[buf_number].filetype ~= "<i-dont-want-to-see-this>" then
@@ -63,11 +62,7 @@ bufferline.setup {
     persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
-    separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
-    enforce_regular_tabs = true,
-    always_show_bufferline = true,
-    -- sort_by = 'id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | function(buffer_a, buffer_b)
-    --   -- add custom logic
+    separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' }, enforce_regular_tabs = true, always_show_bufferline = true, sort_by = 'id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | function(buffer_a, buffer_b) -- add custom logic
     --   return buffer_a.modified > buffer_b.modified
     -- end
   },
@@ -75,6 +70,8 @@ bufferline.setup {
     fill = {
       guifg = { attribute = "fg", highlight = "#ff0000" },
       guibg = { attribute = "bg", highlight = "TabLine" },
+      -- guifg = { attribute = "fg", highlight = "#ff0000" },
+      -- guibg = { attribute = "bg", highlight = "TabLine" },
     },
     background = {
       guifg = { attribute = "fg", highlight = "TabLine" },
