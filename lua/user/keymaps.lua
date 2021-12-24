@@ -86,11 +86,9 @@ keymap("x", "<S-A-Up>", ":co '<-1<CR>V'[=gv", opts)
 
 
 -- Comment binding
-keymap("n", "<leader>/", "<cmd>lua require('Comment').toggle()<CR>", opts)
-keymap("v", "<leader>/", ":lua require(\"Comment.api\").gc(vim.fn.visualmode())<cr>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>" , opts)
+keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({previewer=false}))<cr>" , opts)
 keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>" , opts)
 keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>" , opts)
 keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>" , opts)

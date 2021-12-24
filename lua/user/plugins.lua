@@ -46,6 +46,7 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" --Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" --Easily comment stuff
+  -- use "terrortylor/nvim-comment"
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
   use "akinsho/bufferline.nvim"
@@ -71,14 +72,17 @@ return packer.startup(function(use)
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-  
+
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
- 
+
   --Telescope
   use "nvim-telescope/telescope.nvim"
+
+  -- Telescope Media Files
+  use "nvim-telescope/telescope-media-files.nvim"
 
   --Treesitter
   use {
@@ -86,18 +90,20 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
+  use "p00f/nvim-ts-rainbow"
 
   -- GIT
   use "lewis6991/gitsigns.nvim"
 
   -- Surround
   use "blackCauldron7/surround.nvim"
-  
+
   -- Null - ls
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  
+
   -- Markdown Preview
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'}
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -24,7 +24,7 @@ comment.setup (
     ---@type table
     toggler = {
         ---Line-comment toggle keymap
-        line = 'gcc',
+        line = '<C-_>',
         ---Block-comment toggle keymap
         block = 'gbc',
     },
@@ -33,7 +33,7 @@ comment.setup (
     ---@type table
     opleader = {
         ---Line-comment keymap
-        line = '<C-_>',
+        line = '<leader>c',
         ---Block-comment keymap
         block = 'gb',
     },
