@@ -36,7 +36,6 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<leader>;", ":Bdelete<CR>", opts)
 
-
 -- Move text up and down
 -- keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 -- keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
@@ -63,7 +62,6 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
-
 -- Terminal --
 -- Better terminal navigation
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
@@ -79,19 +77,21 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<C-a>", "ggVG", opts)
 
 -- Duplicate up and down
-keymap("n", "<S-A-Down>", "Yp", opts)  
+keymap("n", "<S-A-Down>", "Yp", opts)
 keymap("n", "<S-A-Up>", "YP", opts)
 keymap("x", "<S-A-Down>", ":co '><CR>V'[=gv", opts)
 keymap("x", "<S-A-Up>", ":co '<-1<CR>V'[=gv", opts)
 
-
--- Comment binding
-
 -- Telescope
-keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({previewer=false}))<cr>" , opts)
-keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>" , opts)
-keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>" , opts)
-keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>" , opts)
+keymap(
+	"n",
+	"<leader>ff",
+	"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({previewer=false}))<cr>",
+	opts
+)
+keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
+keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)
+keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
 
 -- Tabs
 keymap("n", "te", ":tabedit", opts)
@@ -103,3 +103,5 @@ keymap("n", "<leader><S-Tab>", ":tabprevious<CR>", opts)
 keymap("n", "ss", ":split<Return><C-w>w", opts)
 keymap("n", "sv", ":vsplit<Return><C-w>w", opts)
 
+-- Format
+keymap("n", "<leader>,", ":Format<cr>", opts)
