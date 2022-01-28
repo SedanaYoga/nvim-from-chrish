@@ -77,10 +77,10 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<C-a>", "ggVG", opts)
 
 -- Duplicate up and down
-keymap("n", "<S-A-Down>", "Yp", opts)
-keymap("n", "<S-A-Up>", "YP", opts)
-keymap("x", "<S-A-Down>", ":co '><CR>V'[=gv", opts)
-keymap("x", "<S-A-Up>", ":co '<-1<CR>V'[=gv", opts)
+keymap("n", "<S-A-j>", "Yp", opts)
+keymap("n", "<S-A-k>", "YP", opts)
+keymap("x", "<S-A-j>", ":co '><CR>V'[=gv", opts)
+keymap("x", "<S-A-k>", ":co '<-1<CR>V'[=gv", opts)
 
 -- Telescope
 keymap(
@@ -105,3 +105,10 @@ keymap("n", "sv", ":vsplit<Return><C-w>w", opts)
 
 -- Format
 keymap("n", "<leader>,", ":Format<cr>", opts)
+
+-- Toggleterm
+keymap("n", "<leader>ht", "<cmd>lua _HTOP_TOGGLE()<cr>", opts)
+keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<cr>", opts)
+
+-- Highlight
+keymap("n", "<leader>nh", ":nohl<cr>", opts)
