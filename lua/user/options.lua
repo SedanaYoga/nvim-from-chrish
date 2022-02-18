@@ -38,6 +38,12 @@ vim.opt.shortmess:append("c")
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
+vim.cmd([[
+  let g:user_emmet_leader_key=','
+  " let g:user_emmet_install_global = 0
+  " autocmd FileType html,css EmmetInstall
+  let g:user_emmet_mode='n'    "only enable normal mode functions.
+]])
 
 -- Autocommand Options
 local au = require("au")

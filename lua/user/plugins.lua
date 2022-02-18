@@ -68,6 +68,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp") -- Completion for NVIM LSP
 	use("hrsh7th/cmp-nvim-lua") -- Completion for NVIM LUA
 	use("hrsh7th/cmp-emoji")
+	use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
@@ -94,6 +95,7 @@ return packer.startup(function(use)
 
 	-- GIT
 	use("lewis6991/gitsigns.nvim")
+	use("tpope/vim-fugitive")
 
 	-- Surround
 	use("blackCauldron7/surround.nvim")
@@ -116,6 +118,8 @@ return packer.startup(function(use)
 	--Documentation
 	use("kkoomen/vim-doge")
 
+	-- Emmet
+	use("mattn/emmet-vim")
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
