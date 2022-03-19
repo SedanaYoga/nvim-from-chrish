@@ -117,11 +117,14 @@ return packer.startup(function(use)
 
 	--Documentation
 	use("kkoomen/vim-doge")
-
 	-- Emmet
 	use("mattn/emmet-vim")
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
+
+	-- EJS Syntax
+	use("nikvdp/ejs-syntax")
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end

@@ -59,5 +59,3 @@ vim.cmd([[
     autocmd bufreadpost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
   augroup end
 ]])
-
-vim.cmd("au BufNewFile,BufRead *.ejs set filetype=html")
