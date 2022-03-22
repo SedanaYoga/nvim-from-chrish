@@ -122,8 +122,22 @@ return packer.startup(function(use)
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 
-	-- EJS Syntax
-	use("nikvdp/ejs-syntax")
+	-- Impatient
+	-- Improve startup time Neovim
+	use("lewis6991/impatient.nvim")
+
+	--Indentline
+	use("lukas-reineke/indent-blankline.nvim")
+
+	-- Alpha: Dashboard
+	use("goolord/alpha-nvim")
+	use("antoinemadec/FixCursorHold.nvim") -- this is needed to fix lsp doc highlight
+
+	-- Project nvim
+	use("ahmedkhalf/project.nvim")
+
+	-- Which Key
+	use("folke/which-key.nvim")
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

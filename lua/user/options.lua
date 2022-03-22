@@ -16,7 +16,7 @@ vim.opt.splitbelow = true -- force all horizontal splits to go below current win
 vim.opt.splitright = true -- force all vertical splits to go to the right of current window
 vim.opt.swapfile = false -- creates a swapfile
 vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
-vim.opt.timeoutlen = 1000 -- time to wait for a mapped sequence to complete (in milliseconds)
+vim.opt.timeoutlen = 500 -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.undofile = true -- enable persistent undo
 vim.opt.updatetime = 300 -- faster completion (4000ms default)
 vim.opt.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
@@ -57,5 +57,12 @@ vim.cmd([[
   augroup vimrc-remember-cursor-position
     autocmd!
     autocmd bufreadpost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+  augroup end
+]])
+
+vim.cmd([[
+  augroup vimrc-set-ejs-to-html
+  autocmd!
+  autocmd BufNewFile,BufRead *.ejs set filetype=html
   augroup end
 ]])
