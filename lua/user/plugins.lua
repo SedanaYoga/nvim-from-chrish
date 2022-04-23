@@ -140,6 +140,9 @@ return packer.startup(function(use)
 	-- Which Key
 	use("folke/which-key.nvim")
 
+	-- NVIM TS Autotag
+	use("windwp/nvim-ts-autotag")
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
