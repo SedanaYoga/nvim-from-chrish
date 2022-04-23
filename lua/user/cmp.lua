@@ -139,13 +139,18 @@ cmp.setup({
 		select = false,
 	},
 
-	documentation = {
-		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+	-- documentation = {
+	-- 	border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+	-- },
+	window = {
+		documentation = false,
 	},
 
 	experimental = {
-		ghost_text = false,
-		native_menu = false,
+		ghost_text = true,
+		view = {
+			entries = "native",
+		},
 	},
 })
 

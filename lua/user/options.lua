@@ -66,3 +66,10 @@ vim.cmd([[
   autocmd BufNewFile,BufRead *.ejs set filetype=html
   augroup end
 ]])
+
+vim.cmd([[
+  augroup vimrc-auto-close-nvim-tree
+  autocmd!
+  autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif 
+  augroup end
+]])
