@@ -99,7 +99,7 @@ return packer.startup(function(use)
 	use("tpope/vim-fugitive")
 
 	-- Surround
-	use("blackCauldron7/surround.nvim")
+	use("tpope/vim-surround")
 
 	-- Null - ls
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
